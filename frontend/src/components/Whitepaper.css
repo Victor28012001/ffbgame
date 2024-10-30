@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.full-screen {
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    position: relative; /* Allows Canvas to position absolutely */
+}
+
+.canvas {
+    position: absolute; /* Position Canvas absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
