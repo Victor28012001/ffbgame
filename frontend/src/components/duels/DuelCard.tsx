@@ -30,7 +30,7 @@ interface DisplayDataProps {
   difficulty: string;
 }
 
-const DuelCard: React.FC<DisplayDataProps> = ({duel_id, duel_creator, creation_time, stake_amount, allPlayers, duel_opponent, creators_strategy, opponent_strategy, is_completed, difficulty}) => {
+const DuelCard: React.FC<DisplayDataProps> = ({duel_id, duel_creator, creation_time, stake_amount, allPlayers, difficulty}) => {
   // const data = duelData; 
   // console.log("Data obtained..........." + JSON.stringify(data));
   let creator = "";

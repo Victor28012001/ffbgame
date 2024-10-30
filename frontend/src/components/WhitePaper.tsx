@@ -1,7 +1,6 @@
-import { Loader, OrbitControls, useProgress } from '@react-three/drei'
+import { Loader, OrbitControls } from '@react-three/drei'
 import { UI } from './UI'
 import {
-  Environment,
   Float,
 } from '@react-three/drei'
 

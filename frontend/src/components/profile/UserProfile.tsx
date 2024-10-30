@@ -1,18 +1,19 @@
 import { useCallback, useEffect, useState } from 'react'
-import { useWallet, WalletProvider } from '@solana/wallet-adapter-react'
-import { PublicKey } from '@solana/web3.js'
+import { useWallet } from '@solana/wallet-adapter-react'
+// import { useWallet, WalletProvider } from '@solana/wallet-adapter-react'
+// import { PublicKey } from '@solana/web3.js'
 import { Text } from '../atom/Text'
 import userImg from '../../assets/img/team01.png'
 import { ImageWrap } from '../atom/ImageWrap'
 import { Button } from '../atom/Button'
 import { toast } from 'sonner'
-import signMessages from '../../utils/relayTransaction'
+// import signMessages from '../../utils/relayTransaction'
 // import readGameState from "../../utils/readState.js";
 import axios from 'axios'
 // import { useActiveAccount } from "thirdweb/react";
 import { useNavigate } from 'react-router-dom'
 import { useProfileContext } from '../contexts/ProfileContext.js'
-import fetchNotices from '../../utils/readSubgraph.js'
+// import fetchNotices from '../../utils/readSubgraph.js'
 // import readGameState from "../../utils/readState.tsx";
 
 const UserProfile = () => {
@@ -27,9 +28,11 @@ const UserProfile = () => {
   // const userAccount = useActiveAccount();
   const { profile, setProfile } = useProfileContext()
 
-  const { connected, publicKey, connect, disconnect } = useWallet()
+  const { connected, publicKey } = useWallet()
+  // const { connected, publicKey, connect, disconnect } = useWallet()
   const [walletAddress, setWalletAddress] = useState<string | null>(null)
-  const [profileExists, setProfileExists] = useState<boolean>(false)
+  const [,setProfileExists] = useState<boolean>(false)
+  // const [profileExists, setProfileExists] = useState<boolean>(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 

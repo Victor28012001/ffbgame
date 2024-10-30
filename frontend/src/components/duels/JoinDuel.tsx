@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import charactersdata from "../../utils/Charactersdata";
 import { useProfileContext } from "../contexts/ProfileContext.js";
-import fetchNotices from "../../utils/readSubgraph.js";
+// import fetchNotices from "../../utils/readSubgraph.js";
 
 // interface Duel {
 //     duel_id: number;
@@ -60,11 +60,11 @@ const JoinDuelComp = () => {
   const [selectedCharactersId, setSelectedCharactersId] = useState<number[]>(
     []
   );
-  const [profileData, setProfileData] = useState<ProfileData | null>(null);
+  const [profileData ] = useState<ProfileData | null>(null);
   const [characterDetails, setCharacterDetails] = useState<CharacterDetails[]>(
     []
   );
-  const [, setPlayersCharacters] = useState<CharacterDetails[]>([]);
+  // const [, setPlayersCharacters] = useState<CharacterDetails[]>([]);
   const navigate = useNavigate();
   // const activeAccount = useActiveAccount();
   const [acceptStake] = useState(false);

@@ -1,19 +1,20 @@
-import { Text } from '../atom/Text'
-import { useEffect, useState, useMemo } from 'react'
-import { ImageWrap } from '../atom/ImageWrap'
-import { creators } from '../../data/ContentData'
-import { Button } from '../atom/Button'
-import { MdArrowRightAlt } from 'react-icons/md'
+import { Text } from "../atom/Text";
+import { useMemo } from "react";
+import { ImageWrap } from "../atom/ImageWrap";
+import { creators } from "../../data/ContentData";
+import { Button } from "../atom/Button";
+import { MdArrowRightAlt } from "react-icons/md";
 
-import Img1 from '../../assets/creators/nft_img01.jpg'
-import Img2 from '../../assets/creators/nft_img02.jpg'
-import Img3 from '../../assets/creators/nft_img03.jpg'
-import Avatar1 from '../../assets/creators/nft_avatar01.png'
-import Avatar2 from '../../assets/creators/nft_avatar02.png'
-import Avatar3 from '../../assets/creators/nft_avatar03.png'
+import Img1 from "../../assets/creators/nft_img01.jpg";
+import Img2 from "../../assets/creators/nft_img02.jpg";
+import Img3 from "../../assets/creators/nft_img03.jpg";
+import Avatar1 from "../../assets/creators/nft_avatar01.png";
+import Avatar2 from "../../assets/creators/nft_avatar02.png";
+import Avatar3 from "../../assets/creators/nft_avatar03.png";
+import { IconContext } from "react-icons";
 
 const Badges = () => {
-    const imgList = useMemo(() => [Img1, Img2, Img3], []);
+  const imgList = useMemo(() => [Img1, Img2, Img3], []);
   const avatartList = useMemo(() => [Avatar1, Avatar2, Avatar3], []);
 
   return (
@@ -48,7 +49,10 @@ const Badges = () => {
                 alt="Avatar"
                 className="w-[50px] h-[50px] rounded-full object-cover"
               />
-              <Text as="span" className="text-gray-400 font-medium font-barlow text-xl">
+              <Text
+                as="span"
+                className="text-gray-400 font-medium font-barlow text-xl"
+              >
                 {creator.createdBy}
               </Text>
               <Text
@@ -61,9 +65,15 @@ const Badges = () => {
 
             {/* Price and button */}
             <div className="w-full py-4 flex justify-between px-4 items-center gap-4 rounded-md border border-[rgba(76,76,76,0.4)]">
-              <Text as="p" className="flex items-center gap-2 font-bold text-gray-100">
+              <Text
+                as="p"
+                className="flex items-center gap-2 font-bold text-gray-100"
+              >
                 {creator.amount}
-                <Text as="span" className=" text-myYellow font-bold font-barlow text-lg">
+                <Text
+                  as="span"
+                  className=" text-myYellow font-bold font-barlow text-lg"
+                >
                   ETH
                 </Text>
               </Text>
@@ -74,7 +84,12 @@ const Badges = () => {
                 <Text as="span" className="text-lg font-poppins">
                   Sell
                 </Text>
-                <MdArrowRightAlt className="text-2xl" />
+                {/* <MdArrowRightAlt className="text-2xl" /> */}
+                <IconContext.Provider
+                  value={{ color: "#ffbe18", size: "24px" }}
+                >
+                  <MdArrowRightAlt />
+                </IconContext.Provider>
               </Button>
             </div>
           </div>
@@ -84,5 +99,4 @@ const Badges = () => {
   );
 };
 
-
-export default Badges
+export default Badges;

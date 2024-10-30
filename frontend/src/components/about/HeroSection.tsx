@@ -1,10 +1,10 @@
 import { ImageWrap } from '../atom/ImageWrap'
 import { Text } from '../atom/Text'
 import bgImage from '../../assets/img/breadcrumb_bg01.jpg'
-import SliderImg from '../../assets/img/breadcrumb_img01.png'
+// import SliderImg from '../../assets/img/breadcrumb_img01.png'
 import { Link } from 'react-router-dom'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { useRef } from 'react'
 import { Mesh, Group } from 'three'
 

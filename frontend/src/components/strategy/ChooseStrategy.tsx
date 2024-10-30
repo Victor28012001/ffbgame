@@ -13,7 +13,7 @@ import signMessages from "../../utils/relayTransaction";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import charactersdata from "../../utils/Charactersdata";
+// import charactersdata from "../../utils/Charactersdata";
 // import { useProfileContext } from "../contexts/ProfileContext.js";
 import fetchNotices from "../../utils/readSubgraph.js";
 // import readGameState from "../../utils/readState.tsx";
@@ -62,15 +62,15 @@ const ChooseStrategy = () => {
     StrategyInterface | undefined
   >();
   // const [profileData, setProfileData] = useState<ProfileData | null>(null);
-  const [creatorCharacterDetails, setCreatorCharacterDetails] = useState<
+  const [creatorCharacterDetails] = useState<
     CharacterDetails[]
   >([]);
-  const [opponentCharacterDetails, setOpponetCharacterDetails] = useState<
+  const [opponentCharacterDetails] = useState<
     CharacterDetails[]
   >([]);
-  const [duelCreator, setDuelCreator] = useState<string>("");
-  const [duelJoiner, setDuelJoiner] = useState<string>(" ");
-  const [duelType, setDuelType] = useState<string>(" ");
+  // const [duelCreator, setDuelCreator] = useState<string>("");
+  const [duelJoiner] = useState<string>(" ");
+  const [duelType] = useState<string>(" ");
   // const [refresher, setRefresher] = useState<number>();
   const navigate = useNavigate();
   const location = useLocation();

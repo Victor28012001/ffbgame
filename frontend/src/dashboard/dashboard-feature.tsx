@@ -1,12 +1,12 @@
 // import { AppHero } from '../ui/ui-layout';
 import { useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Bloom, EffectComposer, Noise } from '@react-three/postprocessing'
+import { EffectComposer, Noise } from '@react-three/postprocessing'
 import { Suspense } from 'react'
 import { Experience } from '../components/Experience'
-import { UI } from '../components/UI'
+// import { UI } from '../components/UI'
 import { LoadingScreen } from '../components/LoadingScreen'
-import { PlayProvider } from '../contexts/Play'
+// import { PlayProvider } from '../contexts/Play'
 import { useMemo } from 'react'
 import { Overlay } from "../components/Overlay"
 import { usePlay } from '../contexts/Play'

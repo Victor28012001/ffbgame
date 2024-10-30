@@ -10,7 +10,7 @@ import { HiOutlineArrowPath } from "react-icons/hi2";
 // import { useActiveAccount } from "thirdweb/react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import charactersdata from "../../utils/Charactersdata";
 import { useProfileContext } from "../contexts/ProfileContext.js";
@@ -59,16 +59,16 @@ const CreateAiDuel = () => {
   const [selectedCharactersId, setSelectedCharactersId] = useState<number[]>(
     []
   );
-  const [profileData, setProfileData] = useState<ProfileData | null>(null);
+  const [profileData] = useState<ProfileData | null>(null);
   const [characterDetails, setCharacterDetails] = useState<CharacterDetails[]>(
     []
   );
-  const [, setPlayersCharacters] = useState<CharacterDetails[]>([]);
-  const navigate = useNavigate();
+  // const [, setPlayersCharacters] = useState<CharacterDetails[]>([]);
+  // const navigate = useNavigate();
   // const activeAccount = useActiveAccount();
   const [acceptStake] = useState(false);
   const [stakeAmount] = useState<number>(0.0);
-  const { profile, setProfile } = useProfileContext();
+  const { profile } = useProfileContext();
   const [submiting, setSubmiting] = useState<boolean>(false);
   const [difficulty, setDifficulty] = useState<"easy" | "hard">("hard");
 

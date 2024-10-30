@@ -4,28 +4,28 @@ import shape01 from '../../assets/slider/slider_shape01.png'
 import { Text } from '../atom/Text'
 import { Button } from '../atom/Button'
 // import SliderImg from '../../assets/slider/slider_img01.png'
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 // import { useActiveAccount } from "thirdweb/react";
 import { Link } from 'react-router-dom'
 // import { createThirdwebClient } from "thirdweb";
 // import { useConnectModal } from "thirdweb/react";
 // import readGameState from "../../utils/readState.js"
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 // import { useProfileContext } from '../contexts/ProfileContext.js'
 // import fetchNotices from '../../utils/readSubgraph.js'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { Group, Mesh } from 'three'
 
 
 const HeroSection = () => {
   // const activeAccount = useActiveAccount();
-  const [isWalletConnected, setIsWalletConnected] = useState(false)
-  const [isProfileFound, setIsProfileFound] = useState(false)
+  const [isWalletConnected] = useState(false)
+  const [isProfileFound] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isStartBattle, setIsStartBattle] = useState(false)
-  const [submiting, setSubmiting] = useState(false)
-  const navigate = useNavigate()
+  const [submiting] = useState(false)
+  // const navigate = useNavigate()
 
 
   const handleModal = () => {

@@ -22,11 +22,11 @@ import { useProfileContext } from '../contexts/ProfileContext.js'
 //     img: string;
 //     price: number;
 // }
-interface Duel {
-  duel_id: number
-  duel_creator: string
-  // duel_data: string;
-}
+// interface Duel {
+//   duel_id: number
+//   duel_creator: string
+//   // duel_data: string;
+// }
 
 interface CharacterDetails {
   id: number
@@ -61,15 +61,15 @@ const SelectWarriors = () => {
   const [totalCharacterPrice, setTotalCharacterPrice] = useState<number>(0)
   // const [submitClicked, setSubmitClicked] = useState(false);
   const [selectedCharactersId, setSelectedCharactersId] = useState<number[]>([])
-  const [profileData, setProfileData] = useState<ProfileData | null>(null)
+  const [profileData] = useState<ProfileData | null>(null)
   const [characterDetails, setCharacterDetails] = useState<CharacterDetails[]>([])
-  const [, setPlayersCharacters] = useState<CharacterDetails[]>([])
+  // const [, setPlayersCharacters] = useState<CharacterDetails[]>([])
   const navigate = useNavigate()
   // const activeAccount = useActiveAccount();
   const [acceptStake, setAcceptStake] = useState(false)
   const [stakeAmount, setStakeAmount] = useState<number>(0.0)
   const [submiting, setSubmiting] = useState<boolean>(false)
-  const { profile, setProfile } = useProfileContext()
+  const { profile} = useProfileContext()
 
   function shuffleArray(array: CharacterDetails[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -149,27 +149,27 @@ const SelectWarriors = () => {
     rigPage()
   }, [location])
 
-  function findHighestIdDuel(duels: Duel[], creator: string): Duel | null {
-    // Filter duels by the given duel_creator
-    const filteredDuels = duels.filter(
-      (duel) => duel.duel_creator.toLowerCase() === creator.toLowerCase()
-    )
+  // function findHighestIdDuel(duels: Duel[], creator: string): Duel | null {
+  //   // Filter duels by the given duel_creator
+  //   const filteredDuels = duels.filter(
+  //     (duel) => duel.duel_creator.toLowerCase() === creator.toLowerCase()
+  //   )
 
-    if (filteredDuels.length === 0) {
-      return null // Return null if no duels are found for the given creator
-    }
-    console.log('see them', filteredDuels)
-    // Find the duel with the highest id
-    let highestIdDuel = filteredDuels[0]
+  //   if (filteredDuels.length === 0) {
+  //     return null // Return null if no duels are found for the given creator
+  //   }
+  //   console.log('see them', filteredDuels)
+  //   // Find the duel with the highest id
+  //   let highestIdDuel = filteredDuels[0]
 
-    for (let i = 0; i < filteredDuels.length; i++) {
-      if (Number(filteredDuels[i].duel_id) > Number(highestIdDuel.duel_id)) {
-        highestIdDuel = filteredDuels[i]
-      }
-    }
+  //   for (let i = 0; i < filteredDuels.length; i++) {
+  //     if (Number(filteredDuels[i].duel_id) > Number(highestIdDuel.duel_id)) {
+  //       highestIdDuel = filteredDuels[i]
+  //     }
+  //   }
 
-    return highestIdDuel
-  }
+  //   return highestIdDuel
+  // }
 
   if (!profileData) {
     navigate('/profile')
@@ -206,9 +206,9 @@ const SelectWarriors = () => {
   //     }
   // }
 
-  function delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms))
-  }
+  // function delay(ms: number) {
+  //   return new Promise((resolve) => setTimeout(resolve, ms))
+  // }
 
   const submitTx = async () => {
     if (selectedCharactersId.length < 3) {

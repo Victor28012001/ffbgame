@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import {
   AvatarConfig,
   AvatarCreatorViewer,
@@ -20,14 +20,14 @@ import {
 const MintCharacterComponent = () => {
   // const MintCharacterComponent: React.FC<{ wallet: Wallet }> = ({ wallet }) => {
   const [mintStatus, setMintStatus] = useState<string>('') // Status of minting
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [, setIsLoading] = useState<boolean>(false)
 
   // Initialize connection to Solana Devnet
   //   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
   //   const programId = new PublicKey('YourProgramIdHere'); // Replace with your program ID
   //   const provider = new AnchorProvider(connection, wallet, {});
   //   const program = new Program(idl, programId, provider);
-  const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
+  const [, setAvatarUrl] = useState<string | null>(null)
 
   // useEffect to run the async function once when the component mounts
   //   useEffect(() => {

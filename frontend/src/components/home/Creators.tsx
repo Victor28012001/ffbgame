@@ -1,55 +1,55 @@
-import { ImageWrap } from '../atom/ImageWrap'
+// import { ImageWrap } from '../atom/ImageWrap'
 import MaxWrapper from '../shared/MaxWrapper'
-import Img1 from '../../assets/creators/nft_img01.jpg'
-import Img2 from '../../assets/creators/nft_img02.jpg'
-import Img3 from '../../assets/creators/nft_img03.jpg'
-import Avatar1 from '../../assets/creators/nft_avatar01.png'
-import Avatar2 from '../../assets/creators/nft_avatar02.png'
-import Avatar3 from '../../assets/creators/nft_avatar03.png'
-import tab1 from '../../assets/tab/about_tab01.png'
-import tab2 from '../../assets/tab/about_tab02.png'
-import tab3 from '../../assets/tab/about_tab03.png'
-import tab4 from '../../assets/tab/about_tab04.png'
-import tab5 from '../../assets/tab/about_tab05.png'
-import tab6 from '../../assets/tab/about_tab06.png'
-import { useMemo, useState } from 'react'
+// import Img1 from '../../assets/creators/nft_img01.jpg'
+// import Img2 from '../../assets/creators/nft_img02.jpg'
+// import Img3 from '../../assets/creators/nft_img03.jpg'
+// import Avatar1 from '../../assets/creators/nft_avatar01.png'
+// import Avatar2 from '../../assets/creators/nft_avatar02.png'
+// import Avatar3 from '../../assets/creators/nft_avatar03.png'
+// import tab1 from '../../assets/tab/about_tab01.png'
+// import tab2 from '../../assets/tab/about_tab02.png'
+// import tab3 from '../../assets/tab/about_tab03.png'
+// import tab4 from '../../assets/tab/about_tab04.png'
+// import tab5 from '../../assets/tab/about_tab05.png'
+// import tab6 from '../../assets/tab/about_tab06.png'
+// import { useMemo, useState } from 'react'
 import { Text } from '../atom/Text'
-import { Button } from '../atom/Button'
-import { MdArrowRightAlt } from 'react-icons/md'
-import { creators } from '../../data/ContentData'
+// import { Button } from '../atom/Button'
+// import { MdArrowRightAlt } from 'react-icons/md'
+// import { creators } from '../../data/ContentData'
 import CategoryComponent from './Category'
 
-type tabButtonObj = {
-  name: string
-  img: string
-}
+// type tabButtonObj = {
+//   name: string
+//   img: string
+// }
 
-const tabButton: tabButtonObj[] = [
-  {
-    name: 'tabOne',
-    img: tab1,
-  },
-  {
-    name: 'tabTwo',
-    img: tab2,
-  },
-  {
-    name: 'tabThree',
-    img: tab3,
-  },
-  {
-    name: 'tabFour',
-    img: tab4,
-  },
-  {
-    name: 'tabFive',
-    img: tab5,
-  },
-  {
-    name: 'tabSix',
-    img: tab6,
-  },
-]
+// const tabButton: tabButtonObj[] = [
+//   {
+//     name: 'tabOne',
+//     img: tab1,
+//   },
+//   {
+//     name: 'tabTwo',
+//     img: tab2,
+//   },
+//   {
+//     name: 'tabThree',
+//     img: tab3,
+//   },
+//   {
+//     name: 'tabFour',
+//     img: tab4,
+//   },
+//   {
+//     name: 'tabFive',
+//     img: tab5,
+//   },
+//   {
+//     name: 'tabSix',
+//     img: tab6,
+//   },
+// ]
 
 const Creators = () => {
 

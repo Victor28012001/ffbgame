@@ -24,14 +24,14 @@ import { ClusterProvider } from './cluster/cluster-data-access'
 import { SolanaProvider } from './solana/solana-provider'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom'
+// import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom'
 import '@solana/wallet-adapter-react-ui/styles.css'
-import { SolflareWalletAdapter } from '@solana/wallet-adapter-solflare'
+// import { SolflareWalletAdapter } from '@solana/wallet-adapter-solflare'
 
 import { ProfileProvider } from './components/contexts/ProfileContext'
 import { ScrollControls } from '@react-three/drei'
 import PageNotFound from './utils/PageNotFound'
-import Chat from './pages/Chat'
+// import Chat from './pages/Chat'
 import { Preloader } from './utils/Preloader'
 import Header from './components/shared/Header'
 import Footer from './components/shared/Footer'
@@ -52,7 +52,7 @@ export default function Main() {
     []
   )
 
-  const [error, setError] = useState('')
+  // const [error, setError] = useState('')
   const [start, setStart] = useState(false)
 
   useEffect(() => {
@@ -147,7 +147,7 @@ function App() {
   )
 }
 
-const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
+// const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
 const client = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

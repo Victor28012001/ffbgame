@@ -1,3 +1,4 @@
+// @ts-ignore
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -43,7 +44,7 @@ pages.push({
 export const currentPageAtom = atom("intro");
 
 export const UI = () => {
-  const [currentPage, setCurrentPage] = useAtom(currentPageAtom);
+  // const [currentPage, setCurrentPage] = useAtom(currentPageAtom);
   const [page, setPage] = useAtom(pageAtom);
 
   useEffect(() => {
