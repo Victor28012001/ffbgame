@@ -1,4 +1,4 @@
-import Creators from "../components/home/Creators"
+// import Creators from "../components/home/Creators"
 import HeroSection from "../components/home/HeroSection"
 import TopGamers from "../components/home/TopGamers"
 
